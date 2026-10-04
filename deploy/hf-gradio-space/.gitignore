@@ -1,0 +1,7 @@
+# Secrets must never be pushed to the Space repo.
+.env
+.env.*
+__pycache__/
+*.pyc
+.venv/
+*.log
