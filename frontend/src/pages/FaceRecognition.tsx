@@ -31,7 +31,7 @@ export default function FaceRecognition() {
   const videoRef = useRef<HTMLVideoElement | null>(null)
   const streamRef = useRef<MediaStream | null>(null)
 
-  const mlBaseUrl = import.meta.env.VITE_ML_SERVICE_URL ?? 'http://localhost:8000'
+  const mlBaseUrl = (import.meta.env.VITE_ML_SERVICE_URL ?? 'http://localhost:8000').replace(/\/+$/, '')
 
   const { data: students } = useStudents()
   const { profile } = useAuth()
